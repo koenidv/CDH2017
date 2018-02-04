@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/settings"/>
+    <item
+        android:id="@+id/action_menu_more"
+        android:title="@string/more">
+        <menu>
+            <group>
+                <item
+                    android:id="@+id/action_cdh"
+                    android:title="@string/cdhelper"/>
+                <item
+                    android:id="@+id/action_koeniWs"
+                    android:title="@string/koeniWs"/>
+                <item
+                    android:id="@+id/action_cdWs"
+                    android:title="@string/cdWs"/>
+            </group>
+        </menu>
+    </item>
+</menu>

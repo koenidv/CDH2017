@@ -1,0 +1,38 @@
+<resources>
+    <string name="app_name" translatable="false">CD</string>
+
+    <string name="launch_city" translatable="false">CD-Demo</string>
+    <string name="newCity">Neue Stadt</string>
+    <string name="settings">Einstellungen</string>
+    <string name="more">Mehr</string>
+    <string name="cdhelper" translatable="false">CoderDojoHelper 2016</string>
+    <string name="koeniWs" translatable="false">fkoe.org</string>
+    <string name="cdWs" translatable="false">coderdojo-wiesbaden.de</string>
+
+    <string name="noBrowserException">Es ist kein Browser installiert.</string>
+    <string name="cdhNotInstalledException">CoderDojoHelper 2016 ist nicht installiert.</string>
+
+    <string name="cities">Städte</string>
+    <string name="addCity">Gib eine Stadt ein…</string>
+    <string name="colors">Farben</string>
+    <string name="ownColor">Eigene Farbe</string>
+    <string name="lightColors">Pastellfarben</string>
+    <string name="darkColors">Dunkle Farben</string>
+    <string name="drearyColors">Triste Farben</string>
+    <string name="saturatedColors">Gesättigte Farben</string>
+    <string name="mutedColors">Gedämpfte Farben</string>
+    <string name="materialColors">Material Design-Farben</string>
+    <string name="greeting">Begrüßung</string>
+    <string name="greeting_empty">Gib eine Begrüßung ein…</string>
+    <string name="reset">Zurücksetzen</string>
+    <string name="about">Über</string>
+
+    <string name="about_message" translatable="false">CD-Demo.</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="reset_confirmation">Möchtest du wirklich alle Einstellungen und Statistiken zurücksetzen?</string>
+    <string name="yes">Ja</string>
+    <string name="no">Nein</string>
+    <string name="maybe">Vielleicht</string>
+
+    <string name="fa_info" translatable="false">&#xf05a;</string>
+</resources>

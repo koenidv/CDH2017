@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="koenidv.demo.natalia.cd.SettingsActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingTop="32dp">
+
+            <TextView
+                android:id="@+id/citiesTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/cities"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
+
+            <EditText
+                android:id="@+id/cityEditText0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/addCity"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/cityEditText1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/addCity"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/cityEditText2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/addCity"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/cityEditText3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/addCity"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/cityEditText4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/addCity"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <EditText
+                android:id="@+id/cityEditText5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/addCity"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+            <Switch
+                android:id="@+id/colorsSwitch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:switchTextAppearance="@style/TextAppearance.AppCompat"
+                android:text="@string/colors"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+                android:textColor="?android:textColorSecondary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/lightColorsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/lightColors"/>
+
+                <TextView
+                    android:id="@+id/lightColorsDemoTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.03"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/fa_info"
+                    android:textSize="22sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/darkColorsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/darkColors"
+                    android:layout_weight="1"/>
+
+                <TextView
+                    android:id="@+id/darkColorsDemoTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.03"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/fa_info"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/drearyColorsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/drearyColors"/>
+
+                <TextView
+                    android:id="@+id/drearyColorsDemoTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.03"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/fa_info"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/saturatedColorsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/saturatedColors"/>
+
+                <TextView
+                    android:id="@+id/saturatedColorsDemoTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.03"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/fa_info"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/mutedColorsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/mutedColors"/>
+
+                <TextView
+                    android:id="@+id/mutedColorsDemoTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.03"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/fa_info"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <CheckBox
+                    android:id="@+id/materialColorsCheckBox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/materialColors"/>
+
+                <TextView
+                    android:id="@+id/materialColorsDemoTextView"
+                    android:layout_width="14dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.03"
+                    android:gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/fa_info"
+                    android:textSize="22sp"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="32dp"/>
+
+            <TextView
+                android:id="@+id/greetingTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/greeting"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
+
+            <EditText
+                android:id="@+id/greetingEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="@string/greeting_empty"
+                android:imeOptions="actionDone"
+                android:inputType="text"
+                android:maxLines="1"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</android.support.constraint.ConstraintLayout>
