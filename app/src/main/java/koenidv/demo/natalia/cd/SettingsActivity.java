@@ -7,7 +7,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
@@ -26,11 +25,7 @@ import android.widget.LinearLayout;
 import android.widget.Switch;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
-
 import java.util.Random;
-
-import static android.R.attr.font;
 
 public class SettingsActivity extends AppCompatActivity {
 
@@ -67,39 +62,39 @@ public class SettingsActivity extends AppCompatActivity {
         final SharedPreferences settings = getSharedPreferences(getString(R.string.app_name), 0);
         final SharedPreferences.Editor settingsEditor = settings.edit();
 
-        mCityEditText0 = (EditText) findViewById(R.id.cityEditText0);
-        mCityEditText1 = (EditText) findViewById(R.id.cityEditText1);
-        mCityEditText2 = (EditText) findViewById(R.id.cityEditText2);
-        mCityEditText3 = (EditText) findViewById(R.id.cityEditText3);
-        mCityEditText4 = (EditText) findViewById(R.id.cityEditText4);
-        mCityEditText5 = (EditText) findViewById(R.id.cityEditText5);
+        mCityEditText0 = findViewById(R.id.cityEditText0);
+        mCityEditText1 = findViewById(R.id.cityEditText1);
+        mCityEditText2 = findViewById(R.id.cityEditText2);
+        mCityEditText3 = findViewById(R.id.cityEditText3);
+        mCityEditText4 = findViewById(R.id.cityEditText4);
+        mCityEditText5 = findViewById(R.id.cityEditText5);
 
-        mColorsSwitch = (Switch) findViewById(R.id.colorsSwitch);
-        mLightColorsCheckBox = (CheckBox) findViewById(R.id.lightColorsCheckBox);
-        mDarkColorsCheckBox = (CheckBox) findViewById(R.id.darkColorsCheckBox);
-        mDrearyColorsCheckBox = (CheckBox) findViewById(R.id.drearyColorsCheckBox);
-        mSaturatedColorsCheckBox = (CheckBox) findViewById(R.id.saturatedColorsCheckBox);
-        mMutedColorsCheckBox = (CheckBox) findViewById(R.id.mutedColorsCheckBox);
-        mMaterialColorsCheckBox = (CheckBox) findViewById(R.id.materialColorsCheckBox);
+        mColorsSwitch = findViewById(R.id.colorsSwitch);
+        mLightColorsCheckBox = findViewById(R.id.lightColorsCheckBox);
+        mDarkColorsCheckBox = findViewById(R.id.darkColorsCheckBox);
+        mDrearyColorsCheckBox = findViewById(R.id.drearyColorsCheckBox);
+        mSaturatedColorsCheckBox = findViewById(R.id.saturatedColorsCheckBox);
+        mMutedColorsCheckBox = findViewById(R.id.mutedColorsCheckBox);
+        mMaterialColorsCheckBox = findViewById(R.id.materialColorsCheckBox);
 
-        mLightColorsDemoTextView = (TextView) findViewById(R.id.lightColorsDemoTextView);
-        mDarkColorsDemoTextView = (TextView) findViewById(R.id.darkColorsDemoTextView);
-        mDrearyColorsDemoTextView = (TextView) findViewById(R.id.drearyColorsDemoTextView);
-        mSaturatedColorsDemoTextView = (TextView) findViewById(R.id.saturatedColorsDemoTextView);
-        mMutedColorsDemoTextView = (TextView) findViewById(R.id.mutedColorsDemoTextView);
-        mMaterialColorsDemoTextView = (TextView) findViewById(R.id.materialColorsDemoTextView);
+        mLightColorsDemoTextView = findViewById(R.id.lightColorsDemoTextView);
+        mDarkColorsDemoTextView = findViewById(R.id.darkColorsDemoTextView);
+        mDrearyColorsDemoTextView = findViewById(R.id.drearyColorsDemoTextView);
+        mSaturatedColorsDemoTextView = findViewById(R.id.saturatedColorsDemoTextView);
+        mMutedColorsDemoTextView = findViewById(R.id.mutedColorsDemoTextView);
+        mMaterialColorsDemoTextView = findViewById(R.id.materialColorsDemoTextView);
 
-        mGreetingEditText = (EditText) findViewById(R.id.greetingEditText);
+        mGreetingEditText = findViewById(R.id.greetingEditText);
 
 
-        mCityEditText0.setText(settings.getString("city0", "NY"));
-        mCityEditText1.setText(settings.getString("city1", "LA"));
-        mCityEditText2.setText(settings.getString("city2", "Paris"));
-        mCityEditText3.setText(settings.getString("city3", "Rom"));
-        mCityEditText4.setText(settings.getString("city4", "Istanbul"));
-        mCityEditText5.setText(settings.getString("city5", "Hong Kong"));
+        mCityEditText0.setText(settings.getString("city0", getString(R.string.defaultCity0)));
+        mCityEditText1.setText(settings.getString("city1", getString(R.string.defaultCity1)));
+        mCityEditText2.setText(settings.getString("city2", getString(R.string.defaultCity2)));
+        mCityEditText3.setText(settings.getString("city3", getString(R.string.defaultCity3)));
+        mCityEditText4.setText(settings.getString("city4", getString(R.string.defaultCity4)));
+        mCityEditText5.setText(settings.getString("city5", getString(R.string.defaultCity5)));
 
-        /**ToDo: Own Color (Disables other options), Stats*/
+        /*ToDo: Own Color/s (Disables other options)*/
         mColorsSwitch.setChecked(settings.getBoolean("colors", true));
         mLightColorsCheckBox.setChecked(settings.getBoolean("lightColors", true));
         mDarkColorsCheckBox.setChecked(settings.getBoolean("darkColors", false));
@@ -139,6 +134,10 @@ public class SettingsActivity extends AppCompatActivity {
 
         mCityEditText0.addTextChangedListener(new TextWatcher() {
             @Override
+            public void beforeTextChanged(CharSequence mCharSequence, int mI, int mI1, int mI2) {
+            }
+
+            @Override
             public void onTextChanged(CharSequence mCharSequence, int mI, int mI1, int mI2) {
                 if (mCityEditText0.getText().toString().equals("")) {
                     settingsEditor.remove("city0").apply();
@@ -147,9 +146,6 @@ public class SettingsActivity extends AppCompatActivity {
                 }
             }
 
-            @Override
-            public void beforeTextChanged(CharSequence mCharSequence, int mI, int mI1, int mI2) {
-            }
 
             @Override
             public void afterTextChanged(Editable mEditable) {

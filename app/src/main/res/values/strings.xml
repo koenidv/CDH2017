@@ -6,7 +6,7 @@
     <string name="settings">Einstellungen</string>
     <string name="more">Mehr</string>
     <string name="cdhelper" translatable="false">CoderDojoHelper 2016</string>
-    <string name="koeniWs" translatable="false">fkoe.org</string>
+    <string name="koeniWs" translatable="false">koenidv.de</string>
     <string name="cdWs" translatable="false">coderdojo-wiesbaden.de</string>
 
     <string name="noBrowserException">Es ist kein Browser installiert.</string>
@@ -26,6 +26,13 @@
     <string name="greeting_empty">Gib eine Begrüßung ein…</string>
     <string name="reset">Zurücksetzen</string>
     <string name="about">Über</string>
+
+    <string name="defaultCity0">New York</string>
+    <string name="defaultCity1">Los Angeles</string>
+    <string name="defaultCity2">Paris</string>
+    <string name="defaultCity3">Rom</string>
+    <string name="defaultCity4">Istanbul</string>
+    <string name="defaultCity5">Hongkong</string>
 
     <string name="about_message" translatable="false">CD-Demo.</string>
     <string name="ok" translatable="false">OK</string>

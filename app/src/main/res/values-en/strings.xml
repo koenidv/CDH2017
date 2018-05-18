@@ -23,4 +23,10 @@
     <string name="about">About</string>
     <string name="maybe">Maybe</string>
     <string name="reset">Reset</string>
+    <string name="defaultCity3">Rome</string>
+    <string name="defaultCity0">New York</string>
+    <string name="defaultCity1">Los Angeles</string>
+    <string name="defaultCity2">Paris</string>
+    <string name="defaultCity4">Istanbul</string>
+    <string name="defaultCity5">Hongkong</string>
 </resources>

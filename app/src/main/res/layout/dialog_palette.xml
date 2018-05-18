@@ -10,11 +10,11 @@
     <TextView
         android:id="@+id/colorDemoTextView"
         android:layout_width="match_parent"
-        android:layout_height="447dp"
+        android:layout_height="0dp"
+        android:layout_weight="0.97"
         android:gravity="center"
         android:text="@string/lightColors"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:layout_weight="0.97"/>
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
 
     <Button
         android:id="@+id/colorDemoButton"
@@ -26,6 +26,7 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginStart="16dp"
+        android:gravity="end"
         android:text="@string/ok"
         android:textAlignment="textEnd"
         android:textColor="?android:textColorSecondary"/>

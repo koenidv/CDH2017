@@ -29,21 +29,9 @@ import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
 
+    int mCurColor = -1;
     private TextView mCityTextView;
     private ConstraintLayout mBackground;
-
-    int mCurColor = -1;
-
-    public static int manipulateColor(int color, float factor) {
-        int a = Color.alpha(color);
-        int r = Math.round(Color.red(color) * factor);
-        int g = Math.round(Color.green(color) * factor);
-        int b = Math.round(Color.blue(color) * factor);
-        return Color.argb(a,
-                Math.min(r, 255),
-                Math.min(g, 255),
-                Math.min(b, 255));
-    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,9 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         final SharedPreferences settings = getSharedPreferences(getString(R.string.app_name), 0);
 
-        mCityTextView = (TextView) findViewById(R.id.cityTextView);
-        final Button mNewCityButton = (Button) findViewById(R.id.newCityButton);
-        mBackground = (ConstraintLayout) findViewById(R.id.backgroundConstraintLayout);
+        mCityTextView = findViewById(R.id.cityTextView);
+        final Button mNewCityButton = findViewById(R.id.newCityButton);
+        mBackground = findViewById(R.id.backgroundConstraintLayout);
 
         mBackground.setBackgroundColor(Color.WHITE);
         ColorDrawable colorDrawable = new ColorDrawable(manipulateColor(Color.WHITE, 0.6f));
@@ -76,12 +64,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View mView) {
 
                 String[] cities = {
-                        settings.getString("city0", "NY"),
-                        settings.getString("city1", "LA"),
-                        settings.getString("city2", "Paris"),
-                        settings.getString("city3", "Rom"),
-                        settings.getString("city4", "Istanbul"),
-                        settings.getString("city5", "Hong Kong")
+                        settings.getString("city0", getString(R.string.defaultCity0)),
+                        settings.getString("city1", getString(R.string.defaultCity1)),
+                        settings.getString("city2", getString(R.string.defaultCity2)),
+                        settings.getString("city3", getString(R.string.defaultCity3)),
+                        settings.getString("city4", getString(R.string.defaultCity4)),
+                        settings.getString("city5", getString(R.string.defaultCity5))
                 };
 
                 Random r = new Random();
@@ -177,6 +165,17 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    public static int manipulateColor(int color, float factor) {
+        int a = Color.alpha(color);
+        int r = Math.round(Color.red(color) * factor);
+        int g = Math.round(Color.green(color) * factor);
+        int b = Math.round(Color.blue(color) * factor);
+        return Color.argb(a,
+                Math.min(r, 255),
+                Math.min(g, 255),
+                Math.min(b, 255));
+    }
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -211,10 +210,10 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         } else if (id == R.id.action_koeniWs) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://fkoe.org"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://" + getString(R.string.koeniWs)));
             startActivity(intent);
         } else if (id == R.id.action_cdWs) {
-            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("http://coderdojo-wiesbaden.org"));
+            Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://" + getString(R.string.cdWs)));
             startActivity(intent);
         }
 
